@@ -1,0 +1,60 @@
+######################################################################
+#
+#  In this file should be just like edit
+#   1. Find and replace bxfinance-qa.ping-devops.com > bxfinance-<your-name>.ping-devops.com
+#   2. SERVER_PROFILE_BRANCH=qa represents the latest bxfinance features, 
+#      but may not be stable. If it's not working, change to SERVER_PROFILE_BRANCH=master
+#
+######################################################################
+
+SERVER_PROFILE_BRANCH=qa
+SERVER_PROFILE_URL=https://github.com/Technical-Enablement-PingIdentity/BXFinance
+
+PING_IDENTITY_ACCEPT_EULA=YES
+#
+# PF Logging Level
+PF_LOG_LEVEL=DEBUG
+#
+# BaseURL of the PingFed service - Used in the PD Email Notification
+PF_BASE_URL=https://${BXFINANCE_EXTERNAL_HOST}
+#
+# PD User BASE DN
+# Used when PD starts up to create the User Store
+USER_BASE_DN=dc=bxfinance.org
+#
+# PF Admin Password
+# Note - this should match `pfAdminPwd` in postman_vars.json
+PF_USER_PWD=2FederateM0re
+#
+# Adding DelegatedAdmin
+# 
+#
+# PF details for the Delegated Admin OIDC app
+# PF_HOST && PF_PORT are used to construct the allowed `Issuer` of the id_token
+# Delegator will prepend "https://", you only need the port if if it's not `:443`
+PF_HOST=${BXFINANCE_EXTERNAL_HOST}
+PF_CLIENT_ID=Delegator
+#
+# PD details for Delegator API calls
+PD_HOST=${BXFINANCE_EXTERNAL_HOST}
+PD_PORT=443
+#
+# Delegator App (PD DelAdmin)
+#  
+PD_DELEGATOR_PUBLIC_HOSTNAME=${BXFINANCE_EXTERNAL_HOST}
+PD_DELEGATOR_HTTP_PORT=6080
+PD_DELEGATOR_HTTPS_PORT=6443
+PF_ENGINE_PUBLIC_HOSTNAME=${BXFINANCE_EXTERNAL_HOST}
+PF_ENGINE_PUBLIC_PORT=
+PF_DELEGATOR_CLIENTID=Delegator
+PD_ENGINE_PUBLIC_HOSTNAME=${BXFINANCE_EXTERNAL_HOST}
+PD_ENGINE_PUBLIC_PORT=443
+#
+# necessary pap variable
+PING_EXTERNAL_BASE_URL=pingdatagovernancepap:9443
+#
+# Base Hostname of the PingFed service being used for Delegated Admin
+PF_BASE_HOST=${BXFINANCE_EXTERNAL_HOST}
+# bxfinance react app host
+BXFINANCEAPP_HOST=bxfinanceapp
+BXFINANCEAPP_PORT=5000

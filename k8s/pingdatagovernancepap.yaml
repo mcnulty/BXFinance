@@ -47,7 +47,7 @@ spec:
             name: shared-vars
         - secretRef:
             name: server-profile-url
-            optional: false
+            optional: true
         - secretRef:
             name: devops-secret
             optional: true
