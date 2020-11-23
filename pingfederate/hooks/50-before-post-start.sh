@@ -32,6 +32,7 @@ mv /opt/out/instance/server/default/conf/META-INF/hivemodule.xml-modified /opt/o
 echo Removing bundled files
 # AuthN API
 echo PF AuthN API
+rm -f /opt/out/instance/server/default/lib/pf-authn-api-sdk-1.0.0.35.jar
 rm -f /opt/out/instance/server/default/lib/pf-authn-api-sdk-1.0.0.48.jar
 rm -f /opt/out/instance/server/default/lib/pf-authn-api-sdk-1.0.0.54.jar
 echo PingID IK
