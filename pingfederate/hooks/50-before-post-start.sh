@@ -27,9 +27,3 @@ mv /opt/out/instance/server/default/conf/META-INF/hivemodule.xml-modified /opt/o
 # cat /opt/out/instance/server/default/conf/META-INF/hivemodule.xml
 # echo "
 # ##########"
-
-# Delete bundled files so that Server Profile can apply newer ones
-echo Removing bundled files
-# AuthN API
-echo PF AuthN API
-rm -f /opt/out/instance/server/default/lib/pf-authn-api-sdk-1.0.0.35.jar

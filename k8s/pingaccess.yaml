@@ -57,7 +57,7 @@ spec:
             optional: true
         - configMapRef:
             name: pingaccess-environment-variables
-        image: pingidentity/pingaccess:2010-6.1.3
+        image: pingidentity/pingaccess:2008-6.1.0
         name: pingaccess
         ports:
         - containerPort: 9000
