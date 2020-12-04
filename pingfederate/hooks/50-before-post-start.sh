@@ -33,3 +33,5 @@ echo Removing bundled files
 # AuthN API
 echo PF AuthN API
 rm -f /opt/out/instance/server/default/lib/pf-authn-api-sdk-1.0.0.35.jar
+rm -f /opt/out/instance/server/default/lib/pf-authn-api-sdk-1.0.0.54.jar
+
