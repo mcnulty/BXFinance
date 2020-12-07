@@ -2,7 +2,7 @@
 <loc:localIdentity profileId="defaultIdentityProfile" profileName="Default Identity Profile" contractId="defaultPolicyContract" profileEnabled="true" registrationEnabled="true" xmlns:loc="http://pingidentity.com/2017/07/localIdentity">
     <loc:auth-sources/>
     <loc:fields maskOgnlValues="false">
-        <loc:field type="TEXT" default-value="" id="username" label="Username">
+        <loc:field type="TEXT" default-value="" id="username" label="Username (no special chars)">
             <loc:appliesTo profile="true" registration="true"/>
             <loc:parameter param-name="Read-Only" value="false"/>
             <loc:parameter param-name="Required" value="true"/>
