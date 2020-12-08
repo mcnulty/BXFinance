@@ -16,7 +16,7 @@
         <urn:Field name="Show Success Screens">true</urn:Field>
         <urn:Field name="Show Error Screens">true</urn:Field>
         <urn:Field name="Show Timeout Screens">true</urn:Field>
-        <urn:Field name="Region">na</urn:Field>
+        <urn:Field name="Region">NA</urn:Field>
         <urn:Field name="API Request Timeout">5000</urn:Field>
         <urn:Field name="Proxy Settings">System Defaults</urn:Field>
         <urn:Field name="Custom Proxy Host"/>
@@ -32,7 +32,7 @@
         <urn:Field name="Show Success Screens">true</urn:Field>
         <urn:Field name="Show Error Screens">true</urn:Field>
         <urn:Field name="Show Timeout Screens">true</urn:Field>
-        <urn:Field name="Region">na</urn:Field>
+        <urn:Field name="Region">NA</urn:Field>
         <urn:Field name="API Request Timeout">5000</urn:Field>
         <urn:Field name="Proxy Settings">System Defaults</urn:Field>
         <urn:Field name="Custom Proxy Host"/>
