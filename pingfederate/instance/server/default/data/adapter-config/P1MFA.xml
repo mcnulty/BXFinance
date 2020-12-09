@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" isInheritExtendedContractAttributes="false" name="P1MFA" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
+<urn:AdapterConfiguration authnCtxClassRef="" isInheritAttributeSettings="false" isInheritAttributeMapping="false" maskOgnlValues="false" uniqueUserKeyField="pf_none" isInheritExtendedContractAttributes="false" name="P1MFA" xmlns:urn="urn:sourceid.org:saml2:adapter:conf">
     <urn:Fields>
+        <urn:Field name="PingOne Environment">4dq7B5Reksx31i1zw41DKt|17161047-290f-4c88-b771-01adc4e81564</urn:Field>
         <urn:Field name="Environment ID">17161047-290f-4c88-b771-01adc4e81564</urn:Field>
+        <urn:Field name="Region">NA</urn:Field>
         <urn:Field name="Application Client ID">028887be-5d57-4cb8-aeb9-874c4f202ae0</urn:Field>
-        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4wLjMuMCJ9..zt0xs5TVY_ns_XZqjFaMXg.au7EOrMNpZ5-irZhx4Ze8CNPwCzcgRD7M-i-H-6V6d1193MOrykC3VOYxy63DR1pBMHgGwhgM3rKKB3U1jW2UucrcCKsoAET14Gt4w3m9iA.dWm91tQd-kO1sGGI1X3PiQ</urn:Field>
+        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuOC1TTkFQU0hPVCJ9..grmkbITMj83Dn-9o44I06A.rLewLQ_I6eK7Y1VqBn0x9qR0IFQ3eMSXHiBzkYLSLu2TTsGBF4GiEafKC81wK0thXjZqbqKtfGptDBIpqlotbAJSMFhUSGGPSY6x8OTSGvQ.f_YSmWHv5i0erPZ_YHR2cQ</urn:Field>
         <urn:Field name="PingFederate Connection Client ID">86e4c911-042e-42fa-9e29-1e98b2014e01</urn:Field>
-        <urn:Field name="PingFederate Connection Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4wLjMuMCJ9..RM5qHwBlIsOteDprvHjlXQ.pHdbH6Om18gtz-2u5XCEPDSke_5xinCgh5JvwAzUwSSXZSsEUfp9i_hstPdFgV8hBLATcHTpyqS0czzZAKA9Ure5zdVJiwcIo_Dlz2xrDXw.-uuZGF8EGUWNWwMagIjt8w</urn:Field>
+        <urn:Field name="PingFederate Connection Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuOC1TTkFQU0hPVCJ9..cvVqToxKemojpAN67ycztA.BFFtJltCkld_wbKeG_7aDff6R-1HBWu97PrUMUMC5Av3hS9ot6gph2eGoCDBKKMUmg3Qw7gTZo8TbBKnuajTLHAl9x-kfQPyHfWOFIr8itI.SJlGp2bNhPClRRZl7sF9GA</urn:Field>
         <urn:Field name="PingOne Authentication Policy">Multi_Factor</urn:Field>
         <urn:Field name="Test Username">barbielyle</urn:Field>
         <urn:Field name="HTML Template Prefix">pingone-mfa</urn:Field>
@@ -16,7 +18,6 @@
         <urn:Field name="Show Success Screens">true</urn:Field>
         <urn:Field name="Show Error Screens">true</urn:Field>
         <urn:Field name="Show Timeout Screens">true</urn:Field>
-        <urn:Field name="Region">NA</urn:Field>
         <urn:Field name="API Request Timeout">5000</urn:Field>
         <urn:Field name="Proxy Settings">System Defaults</urn:Field>
         <urn:Field name="Custom Proxy Host"/>
@@ -32,7 +33,6 @@
         <urn:Field name="Show Success Screens">true</urn:Field>
         <urn:Field name="Show Error Screens">true</urn:Field>
         <urn:Field name="Show Timeout Screens">true</urn:Field>
-        <urn:Field name="Region">NA</urn:Field>
         <urn:Field name="API Request Timeout">5000</urn:Field>
         <urn:Field name="Proxy Settings">System Defaults</urn:Field>
         <urn:Field name="Custom Proxy Host"/>
