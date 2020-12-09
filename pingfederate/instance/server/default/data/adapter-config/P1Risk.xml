@@ -28,14 +28,22 @@
     </urn:AdvancedFields>
     <urn:Tables>
         <urn:Table name="Additional User Attributes (optional)"/>
-        <urn:Table name="PingOne Risk API Response Mappings (optional)"/>
+        <urn:Table name="PingOne Risk API Response Mappings (optional)">
+            <urn:Row defaultRow="false">
+                <urn:Field name="Local Attribute">userAgent</urn:Field>
+                <urn:Field name="PingOne Risk API Attribute Mapping">/event/browser/userAgent</urn:Field>
+            </urn:Row>
+        </urn:Table>
     </urn:Tables>
-    <urn:ExtendedContractAttributes/>
+    <urn:ExtendedContractAttributes>
+        <urn:AttributeName>userAgent</urn:AttributeName>
+    </urn:ExtendedContractAttributes>
     <urn:UniqueKeyField>riskLevel</urn:UniqueKeyField>
     <urn:UniqueKeyField>riskValue</urn:UniqueKeyField>
     <urn:AttributeMapping>
         <urn1:AttributeMap Name="riskLevel" Type="Adapter" Value="riskLevel" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="riskValue" Type="Adapter" Value="riskValue" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="userAgent" Type="Expression" Value="#this.get(&quot;userAgent&quot;).toString().contains(&quot;Firefox&quot;) ? &quot;true&quot;: &quot;false&quot;" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:AttributeMapping>
 </urn:AdapterConfiguration>

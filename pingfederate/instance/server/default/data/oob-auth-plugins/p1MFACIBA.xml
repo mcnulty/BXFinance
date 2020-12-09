@@ -3,7 +3,7 @@
     <urn:Fields>
         <urn:Field name="PingOne Environment">4dq7B5Reksx31i1zw41DKt|17161047-290f-4c88-b771-01adc4e81564</urn:Field>
         <urn:Field name="Application Client ID">028887be-5d57-4cb8-aeb9-874c4f202ae0</urn:Field>
-        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuOC1TTkFQU0hPVCJ9..wsw43l1axKKxv_CJkAoSUg.wvvIvytsp6I5r3QmwfT1d2W75TWTnKSGJkFspohAXedVXfyunCQJp245S8zAAYABlXwLObTNB0UBWQfmvvJNneoFmg9YxqxJy5K0y7zApng.rKKEfJSFi7n-jFzNECa2aA</urn:Field>
+        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuOC1TTkFQU0hPVCJ9..SL6GFc34UXGl8xL0xrbI0A.QEJdt2nlThY--4hMXLHT_cgnMa0t4rDN3_t2hQIsaDABwH8GhdGqCWtMHN4bxvMw6rp17RounlgXI6fidv4-doc3O5kD49MnPAccf1oEXrA.2AnhaP3DtMYI8cSo7x1MNg</urn:Field>
         <urn:Field name="PingOne Authentication Policy">Multi_Factor</urn:Field>
         <urn:Field name="Test Username">barneylyle</urn:Field>
         <urn:Field name="PingOne Template Name">transaction</urn:Field>
@@ -43,6 +43,10 @@
             <urn:Row defaultRow="false">
                 <urn:Field name="PingOne Template Variable Name">sn</urn:Field>
                 <urn:Field name="PingOne Template Variable Value">$sn</urn:Field>
+            </urn:Row>
+            <urn:Row defaultRow="false">
+                <urn:Field name="PingOne Template Variable Name">scopeDesc</urn:Field>
+                <urn:Field name="PingOne Template Variable Value">$oobAuthRequestContext.requestedScope.values()</urn:Field>
             </urn:Row>
         </urn:Table>
     </urn:Tables>
