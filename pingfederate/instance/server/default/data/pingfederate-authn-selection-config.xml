@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1607106997203" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1607548140696" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="AuthN API Policy" disabled="false" authnApiApp="DefaultAuthNAPIApp">
             <urn:AstRoot context="">
@@ -8,6 +8,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">IDFirst</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -16,6 +17,7 @@
                         <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                             <urn:AuthnSourceKey type="ADAPTER">HTMLFormWithLIP</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -46,6 +48,7 @@
                             <urn:ExpectedValue>Device</urn:ExpectedValue>
                             <urn:Result>Device</urn:Result>
                         </urn:attributeRule>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -55,6 +58,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">P1MFA</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="IDFirst" Value="uid"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -79,6 +83,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">HTMLFormWithLIP</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="IDFirst" Value="uid"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -106,6 +111,7 @@
                                     <urn:Result>deny</urn:Result>
                                 </urn:attributeRule>
                                 <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="username"/>
+                                <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                             </urn:AstAction>
                             <urn:AstChild context="Fail">
                                 <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -129,6 +135,7 @@
                                     <urn:AuthnSourceKey type="ADAPTER">P1MFA</urn:AuthnSourceKey>
                                     <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                                     <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="username"/>
+                                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                                 </urn:AstAction>
                                 <urn:AstChild context="Fail">
                                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -170,6 +177,7 @@
                             <urn:ExpectedValue>identity.registration</urn:ExpectedValue>
                             <urn:Result>Registration</urn:Result>
                         </urn:attributeRule>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -206,6 +214,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">htmlSimple</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -237,6 +246,7 @@
                             <urn:ExpectedValue>identity.registration</urn:ExpectedValue>
                             <urn:Result>Registration</urn:Result>
                         </urn:attributeRule>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -259,6 +269,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">P1MFA</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="uid"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -283,6 +294,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">IDFirst</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -292,6 +304,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">P1MFA</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="IDFirst" Value="uid"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -322,6 +335,7 @@
                             <urn:ExpectedValue>Device</urn:ExpectedValue>
                             <urn:Result>Device</urn:Result>
                         </urn:attributeRule>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -331,6 +345,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">P1MFA</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="IDFirst" Value="uid"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -355,6 +370,7 @@
                             <urn:AuthnSourceKey type="ADAPTER">HTMLFormWithLIP</urn:AuthnSourceKey>
                             <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                             <urn:InputIdMapping Type="Adapter" AttributeSourceId="IDFirst" Value="uid"/>
+                            <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                         </urn:AstAction>
                         <urn:AstChild context="Fail">
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -382,6 +398,7 @@
                                     <urn:Result>allow</urn:Result>
                                 </urn:attributeRule>
                                 <urn:InputIdMapping Type="Adapter" AttributeSourceId="IDFirst" Value="subject"/>
+                                <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                             </urn:AstAction>
                             <urn:AstChild context="Fail">
                                 <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -394,6 +411,7 @@
                                     <urn:AuthnSourceKey type="ADAPTER">P1MFA</urn:AuthnSourceKey>
                                     <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                                     <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="username"/>
+                                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                                 </urn:AstAction>
                                 <urn:AstChild context="Fail">
                                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -440,6 +458,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">IDFirst</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -463,6 +482,7 @@
                     <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                         <urn:AuthnSourceKey type="ADAPTER">HTMLFormWithLIP</urn:AuthnSourceKey>
                         <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                     </urn:AstAction>
                     <urn:AstChild context="Fail">
                         <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -491,6 +511,7 @@
                     <urn:AuthnSourceKey type="ADAPTER">P1MFA</urn:AuthnSourceKey>
                     <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
                     <urn:InputIdMapping Type="Context" Value="context.RequestedUser"/>
+                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
                 </urn:AstAction>
                 <urn:AstChild context="Fail">
                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
@@ -507,6 +528,40 @@
                 </urn:AstChild>
             </urn:AstRoot>
             <urn:treeDescription>Policy Used to allow PID SDK to be used for SSPR</urn:treeDescription>
+        </urn:AuthnSelectionTree>
+        <urn:AuthnSelectionTree treeName="test P1Risk" disabled="false" authnApiApp="">
+            <urn:AstRoot context="">
+                <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <urn:AuthnSourceKey type="ADAPTER">HTMLFormWithLIP</urn:AuthnSourceKey>
+                    <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                    <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
+                </urn:AstAction>
+                <urn:AstChild context="Fail">
+                    <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                </urn:AstChild>
+                <urn:AstChild context="Success">
+                    <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <urn:AuthnSourceKey type="ADAPTER">P1Risk</urn:AuthnSourceKey>
+                        <urn:fallbackToSuccess>true</urn:fallbackToSuccess>
+                        <urn:InputIdMapping Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="username"/>
+                        <urn:userIdAuthenticated>false</urn:userIdAuthenticated>
+                    </urn:AstAction>
+                    <urn:AstChild context="Fail">
+                        <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+                    </urn:AstChild>
+                    <urn:AstChild context="Success">
+                        <urn:AstAction apcId="defaultPolicyContract" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <urn:AttributeMapping>
+                                <urn1:AttributeMap Name="ImmutableID" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="mail" Type="No Mapping" Value="NO_MAPPING" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                            </urn:AttributeMapping>
+                        </urn:AstAction>
+                    </urn:AstChild>
+                </urn:AstChild>
+            </urn:AstRoot>
+            <urn:treeDescription>Test P1 Risk</urn:treeDescription>
         </urn:AuthnSelectionTree>
     </urn:AuthnSelectionTrees>
     <urn:DefaultAuthnSources/>

@@ -7,6 +7,7 @@
         <con:item name="htmlSimple">com.pingidentity.adapters.htmlform.idp.HtmlFormIdpAuthnAdapter</con:item>
         <con:item name="iOvationAdapter">com.pingidentity.adapters.iovation.IovationIdpAdapter</con:item>
         <con:item name="P1MFA">com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter</con:item>
+        <con:item name="P1Risk">com.pingidentity.adapters.pingone.risk.PingOneRiskManagementIdpAdapter</con:item>
     </con:map>
     <con:map name="SpAuthnAdapterInstances">
         <con:item name="BXFSPRefID">com.pingidentity.pf.adapters.referenceid.SpBackchannelReferenceAuthnAdapter</con:item>
