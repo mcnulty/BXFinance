@@ -43,7 +43,11 @@
     <urn:AttributeMapping>
         <urn1:AttributeMap Name="riskLevel" Type="Adapter" Value="riskLevel" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:AttributeMap Name="riskValue" Type="Adapter" Value="riskValue" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-        <urn1:AttributeMap Name="userAgent" Type="Expression" Value="#this.get(&quot;userAgent&quot;).toString().contains(&quot;Firefox&quot;) ? &quot;true&quot;: &quot;false&quot;" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+        <urn1:AttributeMap Name="userAgent" Type="Expression" Value="userAgent = #this.get(&quot;userAgent&quot;).toString(),
+
+userAgent.contains(&quot;Chrome&quot;)?&quot;Chrome&quot;:userAgent.contains(&quot;Firefox&quot;)?&quot;Firefox&quot;:&quot;NoAllow&quot;
+
+" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:AttributeMapping>
 </urn:AdapterConfiguration>
