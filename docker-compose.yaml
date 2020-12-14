@@ -35,7 +35,7 @@ services:
       - 8443:8443
   
   pingaccess:
-    image: 574076504146.dkr.ecr.us-west-2.amazonaws.com/snapshot-builds/pingaccess:6.2.0-FAT
+    image: pingidentity/pingaccess:6.2.0-edge
     command: wait-for pingfederate:9999 -t 900 -- entrypoint.sh start-server
     env_file:
      - ~/.pingidentity/devops
