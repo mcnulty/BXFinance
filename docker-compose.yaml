@@ -2,7 +2,7 @@ version: "3"
 
 services:
   pingfederate:
-    image: 574076504146.dkr.ecr.us-west-2.amazonaws.com/snapshot-builds/pingfederate:10.2.0-FAT
+    image: pingidentity/pingfederate:10.2.0-edge
     command: wait-for pingdirectory:389 -t 520 -- entrypoint.sh start-server
     env_file:
       - ~/.pingidentity/devops
