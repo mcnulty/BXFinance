@@ -15,7 +15,7 @@ services:
       - 9999:9999
 
   pingdirectory:
-    image: pingidentity/pingdirectory:2008-8.1.0.0
+    image: pingidentity/pingdirectory:8.2.0.0-edge
     env_file:
       - ~/.pingidentity/devops
       - ./env_vars
