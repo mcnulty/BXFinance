@@ -58,7 +58,7 @@ services:
      - 6080:6080
 
   pingdatapap:
-    image: pingdevops.com/pingidentity/pingdatagovernancepap:8.2.0.0-RC1
+    image: pingidentity/pingdatagovernancepap:8.2.0.0-edge
     env_file:
       - ~/.pingidentity/devops
       - ./env_vars
