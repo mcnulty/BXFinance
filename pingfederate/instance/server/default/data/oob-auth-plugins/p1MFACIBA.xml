@@ -3,9 +3,9 @@
     <urn:Fields>
         <urn:Field name="PingOne Environment">4dq7B5Reksx31i1zw41DKt|17161047-290f-4c88-b771-01adc4e81564</urn:Field>
         <urn:Field name="Application Client ID">028887be-5d57-4cb8-aeb9-874c4f202ae0</urn:Field>
-        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuOC1TTkFQU0hPVCJ9..SL6GFc34UXGl8xL0xrbI0A.QEJdt2nlThY--4hMXLHT_cgnMa0t4rDN3_t2hQIsaDABwH8GhdGqCWtMHN4bxvMw6rp17RounlgXI6fidv4-doc3O5kD49MnPAccf1oEXrA.2AnhaP3DtMYI8cSo7x1MNg</urn:Field>
+        <urn:Field name="Application Client Secret">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRmQ3WmhZNWo0ayIsInZlcnNpb24iOiIxMC4yLjAuOC1TTkFQU0hPVCJ9..gyx-metjcyVfUupOpKgmOA.ZsZpf0o9fzd77vTJMt7eOGwxVAYv48Yn3m9aDh05p_Ym9rovFWd9qFmQZITsZaTa_ZS5bnWMx32cHjvGtuLYDm-tFNoxF4MHOP-LgnjvSk4.jPJa2xyOolsznS9sPVMSag</urn:Field>
         <urn:Field name="PingOne Authentication Policy">Multi_Factor</urn:Field>
-        <urn:Field name="Test Username">barneylyle</urn:Field>
+        <urn:Field name="Test Username"/>
         <urn:Field name="PingOne Template Name">transaction</urn:Field>
         <urn:Field name="PingOne Template Variant"/>
         <urn:Field name="Client Context">{
@@ -18,7 +18,7 @@
         <urn:Field name="Custom Proxy Port"/>
     </urn:Fields>
     <urn:AdvancedFields>
-        <urn:Field name="Test Username">barneylyle</urn:Field>
+        <urn:Field name="Test Username"/>
         <urn:Field name="PingOne Template Name">transaction</urn:Field>
         <urn:Field name="PingOne Template Variant"/>
         <urn:Field name="Client Context">{
