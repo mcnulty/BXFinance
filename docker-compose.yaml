@@ -73,7 +73,7 @@ services:
       - 9443:9443
 
   pingdatagovernance:
-    image: pingdevops.com/pingidentity/pingdatagovernance:8.2.0.0-RC1 
+    image: pingidentity/pingdatagovernance:8.2.0.0-edge 
     env_file:
       - ~/.pingidentity/devops
       - ./env_vars
