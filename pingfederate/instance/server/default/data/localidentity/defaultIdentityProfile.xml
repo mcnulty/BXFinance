@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <loc:localIdentity profileId="defaultIdentityProfile" profileName="Default Identity Profile" contractId="defaultPolicyContract" profileEnabled="true" registrationEnabled="true" xmlns:loc="http://pingidentity.com/2017/07/localIdentity">
     <loc:auth-sources/>
-    <loc:fields maskOgnlValues="false">
+    <loc:fields stripSpaceFromUniqueField="false" maskOgnlValues="false">
         <loc:field type="TEXT" default-value="" id="username" label="Username">
             <loc:appliesTo profile="true" registration="true"/>
             <loc:parameter param-name="Read-Only" value="false"/>
@@ -98,14 +98,14 @@
             <loc:parameter param-name="Read-Only" value="false"/>
             <loc:parameter param-name="Required" value="false"/>
             <loc:parameter param-name="Mask Log Values" value="false"/>
-            <loc:options>&lt; $100,000</loc:options>
+            <loc:options>Less than $100,000</loc:options>
             <loc:options>$100,000 - $300,000</loc:options>
             <loc:options>$300,000 - $500,000</loc:options>
-            <loc:options>> $500,000</loc:options>
+            <loc:options>More than $500,000</loc:options>
         </loc:field>
     </loc:fields>
     <loc:email-verification-config emailVerificationEnabled="false" verifyEmailTemplateName="message-template-email-ownership-verification.html" emailVerificationSentTemplateName="local.identity.email.verification.sent.html" emailVerificationSuccessTemplateName="local.identity.email.verification.success.html" emailVerificationErrorTemplateName="local.identity.email.verification.error.html" otlTimeToLive="1440" verificationEmailField="" verificationStatusField="" notificationPublisherId=""/>
-    <loc:registration-config captchaEnabled="false" templateName="local.identity.registration.html"/>
+    <loc:registration-config captchaEnabled="false" templateName="local.identity.registration.html" thisIsMyDevice="false" createAuthnSessionAfterRegistration="true" usernameField=""/>
     <loc:profile-config templateName="local.identity.profile.html" deleteIdentityEnabled="false"/>
     <loc:datastore-mapping>
         <loc:DataSource Description="" Type="LDAP" DataSourceId="LDAP-PingDirectory">
