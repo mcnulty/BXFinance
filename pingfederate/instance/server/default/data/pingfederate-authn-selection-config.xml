@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1607984477103" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1609968254039" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
-        <urn:AuthnSelectionTree treeName="AuthN API Policy" disabled="false" authnApiApp="DefaultAuthNAPIApp">
+        <urn:AuthnSelectionTree treeName="AuthN API Policy" disabled="false" authnApiApp="zpKCPcAi883ccAFRt1aMEQeuu">
             <urn:AstRoot context="">
                 <urn:AstAction authnSelectorId="authnApi" xsi:type="urn:AuthnSelectorActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                 <urn:AstChild context="API">
@@ -64,17 +64,13 @@
                             <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                         </urn:AstChild>
                         <urn:AstChild context="Success">
-                            <urn:AstAction lipId="defaultIdentityProfile" xsi:type="urn:LocalIdentityMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                <urn:InboundAttributeMapping>
-                                    <urn1:AttributeMap Name="pf.local.identity.unique.id" Type="Adapter" AttributeSourceId="IDFirst" Value="uid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                    <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                </urn:InboundAttributeMapping>
-                                <urn:OutboundAttributeMapping>
+                            <urn:AstAction apcId="defaultPolicyContract" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                <urn:AttributeMapping>
                                     <urn1:AttributeMap Name="ImmutableID" Type="Adapter" AttributeSourceId="IDFirst" Value="entryUUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:AttributeMap Name="mail" Type="Adapter" AttributeSourceId="IDFirst" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                    <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="IDFirst" Value="uid" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
+                                    <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="IDFirst" Value="subject" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                     <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                </urn:OutboundAttributeMapping>
+                                </urn:AttributeMapping>
                             </urn:AstAction>
                         </urn:AstChild>
                     </urn:AstChild>
@@ -127,32 +123,24 @@
                                     <urn:AstAction noOpType="DONE" xsi:type="urn:NoOpActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
                                 </urn:AstChild>
                                 <urn:AstChild context="Success">
-                                    <urn:AstAction lipId="defaultIdentityProfile" xsi:type="urn:LocalIdentityMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                        <urn:InboundAttributeMapping>
-                                            <urn1:AttributeMap Name="pf.local.identity.unique.id" Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                            <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                        </urn:InboundAttributeMapping>
-                                        <urn:OutboundAttributeMapping>
+                                    <urn:AstAction apcId="defaultPolicyContract" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                        <urn:AttributeMapping>
                                             <urn1:AttributeMap Name="ImmutableID" Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="entryUUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                             <urn1:AttributeMap Name="mail" Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                             <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                             <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                        </urn:OutboundAttributeMapping>
+                                        </urn:AttributeMapping>
                                     </urn:AstAction>
                                 </urn:AstChild>
                             </urn:AstChild>
                             <urn:AstChild context="Chrome">
-                                <urn:AstAction lipId="defaultIdentityProfile" xsi:type="urn:LocalIdentityMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                    <urn:InboundAttributeMapping>
-                                        <urn1:AttributeMap Name="pf.local.identity.unique.id" Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                        <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                    </urn:InboundAttributeMapping>
-                                    <urn:OutboundAttributeMapping>
+                                <urn:AstAction apcId="defaultPolicyContract" xsi:type="urn:ApcMappingActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <urn:AttributeMapping>
                                         <urn1:AttributeMap Name="ImmutableID" Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="entryUUID" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                         <urn1:AttributeMap Name="mail" Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="mail" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                         <urn1:AttributeMap Name="subject" Type="Adapter" AttributeSourceId="HTMLFormWithLIP" Value="username" xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
                                         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
-                                    </urn:OutboundAttributeMapping>
+                                    </urn:AttributeMapping>
                                 </urn:AstAction>
                             </urn:AstChild>
                             <urn:AstChild context="NoAllow">
