@@ -83,7 +83,7 @@ services:
       - SERVER_PROFILE_PATH=pingdatagovernance
       - PING_IDENTITY_ACCEPT_EULA=YES
     ports:
-      - 3443:443
+      - 3443:3443
 
   
 
