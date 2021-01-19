@@ -381,7 +381,7 @@ is not recommended as it may interfere with expected server behavior.
                                         <input class="$required $validateRequired" id="$escapedFieldId" autocomplete="user-email" type="email" name="$escapedFieldId" value="$fieldValue" size="36" onkeyup="return postOnReturn(event)" $fieldDisabled/>
                                     </div>
                                 
-                                #elseif( $field.getName() == "username" )
+                                #elseif( $field.getName() == "Username" )
                                     <div class="ping-input-label">
                                         $templateMessages.getMessageWithDefault($messageKeyPrefix, "$fieldId", "$field.getData().getLabel()")
                                     </div>
