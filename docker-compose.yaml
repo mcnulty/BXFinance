@@ -2,7 +2,7 @@ version: "3"
 
 services:
   pingfederate:
-    image: pingidentity/pingfederate:10.2.0-edge
+    image: pingidentity/pingfederate:2012-10.2.0
     command: wait-for pingdirectory:389 -t 520 -- entrypoint.sh start-server
     env_file:
       - ~/.pingidentity/devops
@@ -15,7 +15,7 @@ services:
       - 9999:9999
 
   pingdirectory:
-    image: pingidentity/pingdirectory:8.2.0.0-edge
+    image: pingidentity/pingdirectory:2012-8.2.0.0
     env_file:
       - ~/.pingidentity/devops
       - ./env_vars
@@ -29,13 +29,13 @@ services:
       - 2443:2443
   
   pingdataconsole:
-    image: pingidentity/pingdataconsole:latest
+    image: pingidentity/pingdataconsole:2012-8.2.0.0
     ports:
       - 8080:8080
       - 8443:8443
   
   pingaccess:
-    image: pingidentity/pingaccess:6.2.0-edge
+    image: pingidentity/pingaccess:2012-6.2.0
     command: wait-for pingfederate:9999 -t 900 -- entrypoint.sh start-server
     env_file:
      - ~/.pingidentity/devops
