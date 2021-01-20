@@ -48,15 +48,6 @@ services:
      - 443:3000
      - 9000:9000
 
-  pingdelegator:
-    image: pingidentity/pingdelegator:edge
-    environment: 
-      - VERBOSE=true
-    env_file:
-     - ./env_vars
-    ports:
-     - 6080:6080
-
   pingdatapap:
     image: pingidentity/pingdatagovernancepap:2012-8.2.0.0
     env_file:
