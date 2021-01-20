@@ -3,7 +3,7 @@
     <loc:auth-sources/>
     <loc:fields stripSpaceFromUniqueField="false" maskOgnlValues="false">
         <loc:field type="TEXT" default-value="" id="username" label="Username">
-            <loc:appliesTo profile="true" registration="true"/>
+            <loc:appliesTo profile="false" registration="true"/>
             <loc:parameter param-name="Read-Only" value="false"/>
             <loc:parameter param-name="Required" value="true"/>
             <loc:parameter param-name="Unique ID Field" value="true"/>
