@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urn:AuthnSelectionConfig lastModifiedMillis="1609968254039" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
+<urn:AuthnSelectionConfig lastModifiedMillis="1611250056969" enableAuthnSelection="true" enableSpAuthnSelection="false" failIfNoSelection="false" xmlns:urn="urn:pingidentity.com:pf:authn-selection">
     <urn:AuthnSelectionTrees>
         <urn:AuthnSelectionTree treeName="AuthN API Policy" disabled="false" authnApiApp="zpKCPcAi883ccAFRt1aMEQeuu">
             <urn:AstRoot context="">
@@ -493,7 +493,7 @@
             </urn:AstRoot>
             <urn:treeDescription>Policy that is invoked by events that do not use the Extended Properties</urn:treeDescription>
         </urn:AuthnSelectionTree>
-        <urn:AuthnSelectionTree treeName="Forgot Password" disabled="false" authnApiApp="DefaultAuthNAPIApp">
+        <urn:AuthnSelectionTree treeName="Forgot Password" disabled="false" authnApiApp="">
             <urn:AstRoot context="">
                 <urn:AstAction xsi:type="urn:AuthnSourceActionType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <urn:AuthnSourceKey type="ADAPTER">P1MFA</urn:AuthnSourceKey>
