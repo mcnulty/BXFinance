@@ -21,6 +21,11 @@ kubectl create secret generic server-profile-url --from-literal=SERVER_PROFILE_U
   ping-devops generate devops-secret | k apply -f -
   ```
 
+1. a. License Files!:
+  ```
+  ping-devops generate license-secret PingDirectory.lic
+  ```
+
 2. b. `gcr.io/ping-gte/bxfinanceapp` is a private image and needs an 'imagePullSecret': 
   ```
   kubectl create secret docker-registry gcr-pull-secret \
