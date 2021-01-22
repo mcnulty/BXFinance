@@ -84,7 +84,7 @@ spec:
             optional: true
         - configMapRef:
             name: pingdirectory-environment-variables
-        image: pingidentity/pingdirectory:2008-8.1.0.0
+        image: pingidentity/pingdirectory:2012-8.2.0.0
         lifecycle:
           preStop:
             exec:
