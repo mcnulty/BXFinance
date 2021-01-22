@@ -77,8 +77,17 @@ spec:
             cpu: "2"
             memory: 2.5Gi
           requests:
-            cpu: "2"
+            cpu: "1"
             memory: 2.5Gi
+        volumeMounts:
+        - name: pingfederate-license
+          mountPath: "/opt/in/instance/server/default/conf/pingfederate.lic"
+          subPath: pingfederate.lic
+          readOnly: true
+      volumes:
+      - name: pingfederate-license
+        secret:
+          secretName: pingfederate-license
       initContainers:
       - name: init
         image: curlimages/curl:latest
