@@ -110,7 +110,7 @@
     <loc:datastore-mapping>
         <loc:DataSource Description="" Type="LDAP" DataSourceId="LDAP-PingDirectory">
             <urn:Parameter Name="create_pattern" Value="uid=${username}" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2"/>
-            <urn:Parameter Name="search_base" Value="ou=People,dc=bxfinance.org" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2"/>
+            <urn:Parameter Name="search_base" Value="ou=People,${USER_BASE_DN}" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn:Parameter Name="search_scope" Value="ONELEVEL_SCOPE" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2"/>
             <urn:Parameter Name="object_class" Value="bxFinanceUser" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2"/>
         </loc:DataSource>

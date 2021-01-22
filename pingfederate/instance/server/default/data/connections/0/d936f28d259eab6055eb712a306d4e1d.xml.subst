@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<md:EntityDescriptor entityID="https://demo.bxfinance.xyz" urn:name="BXFinance IdP" ID="F5WkxCNpVEYMEtEQzNd89TcjD3W" urn:baseUrl="https://demo.bxfinance.xyz" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
+<md:EntityDescriptor entityID="${PF_BASE_URL}" urn:name="BXFinance IdP" ID="F5WkxCNpVEYMEtEQzNd89TcjD3W" urn:baseUrl="${PF_BASE_URL}" urn:LogLevel="STANDARD" urn:isActive="true" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:urn="urn:sourceid.org:saml2:metadata-extension:v2">
     <md:Extensions>
         <urn:EntityExtension PFVersion="10.0.3.0" LicenseGroup="">
             <urn:DigitialSignatureAliases SigningKeyAlias="signing-cert" includeX509inXmlSig="false" includeRawKeyInXmlSig="false" SigningAlgorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256">
@@ -25,7 +25,7 @@
             <urn:RoleExtension ArtifactTimeoutSeconds="60" LastModified="2020-07-27T16:44:03.662Z">
                 <urn:IncomingBindings Artifact="false" POST="true" Redirect="true" SOAP="false"/>
                 <urn:EnabledProfiles IDPInitiatedSSO="true" IDPInitiatedSLO="false" SPInitiatedSSO="true" SPInitiatedSLO="true"/>
-                <urn:IDP AssertionsSigned="false" DefaultTargetResource="https://demo.bxfinance.xyz/app/banking">
+                <urn:IDP AssertionsSigned="false" DefaultTargetResource="${PF_BASE_URL}/app/banking">
                     <urn:TargetAttributeMapping AdapterInstanceId="BXFSPRefID" RestrictVirtualServerIds="false">
                         <urn:AttributeMap Name="uid" Type="LDAP" Value="uid"/>
                         <urn:AttributeMap Name="Email" Type="LDAP" Value="mail"/>
@@ -38,7 +38,7 @@
                         <urn:AttributeMap Name="LastName" Type="LDAP" Value="sn"/>
                         <urn:AttributeSource Description="LDAP" Type="LDAP" DataSourceId="LDAP-PingDirectory">
                             <urn:Parameter Name="filter" Value="(|(entryUUID=${SAML_SUBJECT})(uid=${SAML_SUBJECT})(mail=${SAML_SUBJECT}))"/>
-                            <urn:Parameter Name="search_base" Value="ou=People,dc=bxfinance.org"/>
+                            <urn:Parameter Name="search_base" Value="ou=People,${USER_BASE_DN}"/>
                             <urn:Parameter Name="search_scope" Value="ONELEVEL_SCOPE"/>
                             <urn:Parameter Name="memberof_nested_group" Value="false"/>
                         </urn:AttributeSource>

@@ -12,7 +12,7 @@
 "msg":"Please approve the transaction for BXFinance"
 }</urn:Field>
         <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
-        <urn:Field name="API Request Timeout">5000</urn:Field>
+        <urn:Field name="API Request Timeout">${BXFINANCEAPP_PORT}</urn:Field>
         <urn:Field name="Proxy Settings">System Defaults</urn:Field>
         <urn:Field name="Custom Proxy Host"/>
         <urn:Field name="Custom Proxy Port"/>
@@ -25,7 +25,7 @@
 "msg":"Please approve the transaction for BXFinance"
 }</urn:Field>
         <urn:Field name="Messages Files">pingone-mfa-messages</urn:Field>
-        <urn:Field name="API Request Timeout">5000</urn:Field>
+        <urn:Field name="API Request Timeout">${BXFINANCEAPP_PORT}</urn:Field>
         <urn:Field name="Proxy Settings">System Defaults</urn:Field>
         <urn:Field name="Custom Proxy Host"/>
         <urn:Field name="Custom Proxy Port"/>

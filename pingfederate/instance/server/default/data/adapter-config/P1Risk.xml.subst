@@ -5,7 +5,7 @@
         <urn:Field name="Risk Policy ID"/>
         <urn:Field name="Include Device Profile">true</urn:Field>
         <urn:Field name="Device Profiling Method">Captured by this adapter</urn:Field>
-        <urn:Field name="Device Profiling Timeout">5000</urn:Field>
+        <urn:Field name="Device Profiling Timeout">${BXFINANCEAPP_PORT}</urn:Field>
         <urn:Field name="Cookie Name Prefix">pingone.risk.device.profile</urn:Field>
         <urn:Field name="Failure Mode">Continue with fallback policy decision</urn:Field>
         <urn:Field name="Fallback Policy Decision Value">MEDIUM</urn:Field>
@@ -17,7 +17,7 @@
     <urn:AdvancedFields>
         <urn:Field name="Include Device Profile">true</urn:Field>
         <urn:Field name="Device Profiling Method">Captured by this adapter</urn:Field>
-        <urn:Field name="Device Profiling Timeout">5000</urn:Field>
+        <urn:Field name="Device Profiling Timeout">${BXFINANCEAPP_PORT}</urn:Field>
         <urn:Field name="Cookie Name Prefix">pingone.risk.device.profile</urn:Field>
         <urn:Field name="Failure Mode">Continue with fallback policy decision</urn:Field>
         <urn:Field name="Fallback Policy Decision Value">MEDIUM</urn:Field>

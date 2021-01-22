@@ -44,7 +44,7 @@
                         <urn:AttributeMap Name="sn" Type="Assertion" Value="LastName"/>
                         <urn:AttributeSource Description="LDAP" Type="LDAP" DataSourceId="LDAP-PingDirectory">
                             <urn:Parameter Name="filter" Value="uid=${SAML_SUBJECT}"/>
-                            <urn:Parameter Name="search_base" Value="ou=People,dc=bxfinance.org"/>
+                            <urn:Parameter Name="search_base" Value="ou=People,${USER_BASE_DN}"/>
                             <urn:Parameter Name="search_scope" Value="ONELEVEL_SCOPE"/>
                         </urn:AttributeSource>
                     </urn:UserProvisioning>

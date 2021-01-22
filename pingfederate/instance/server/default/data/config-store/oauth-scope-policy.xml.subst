@@ -14,7 +14,7 @@
     <con:map name="scope-group-descriptions"/>
     <con:map name="scope-group-mappings"/>
     <con:map name="exclusive-scope-descriptions">
-        <con:item name="urn:pingidentity:directory-delegated-admin">Used to enable Delegator</con:item>
+        <con:item name="urn:pingidentity:directory-delegated-admin">Used to enable ${PF_DELEGATOR_CLIENTID}</con:item>
     </con:map>
     <con:list name="dynamic-exclusive-scopes"/>
     <con:map name="exclusive-scope-group-descriptions"/>

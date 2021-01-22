@@ -19,7 +19,7 @@
       <timeout>60</timeout>
       <source dataSourceId="LDAP-PingDirectory">
         <ldapGuidFormatter guidAttributeName="entryUUID" guidIsBinary="false"/>
-        <usersBaseDN>ou=People,dc=bxfinance.org</usersBaseDN>
+        <usersBaseDN>ou=People,${USER_BASE_DN}</usersBaseDN>
         <filter>(&amp;(mobile=*)(objectClass=bxFinanceUser))</filter>
         <memberOfGroupAttributeName/>
         <groupMemberAttributeName>uniqueMember</groupMemberAttributeName>
@@ -300,7 +300,7 @@
       <timeout>60</timeout>
       <source dataSourceId="LDAP-PingDirectory">
         <ldapGuidFormatter guidAttributeName="entryUUID" guidIsBinary="false"/>
-        <usersBaseDN>ou=People,dc=bxfinance.org</usersBaseDN>
+        <usersBaseDN>ou=People,${USER_BASE_DN}</usersBaseDN>
         <filter>&amp;(mobile=*)(objectClass=bxFinanceUser)</filter>
         <memberOfGroupAttributeName/>
         <groupMemberAttributeName>uniqueMember</groupMemberAttributeName>

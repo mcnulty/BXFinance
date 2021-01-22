@@ -18,6 +18,6 @@
         <urn1:TokenAuthorizationIssuanceCriteria xmlns:urn1="urn:sourceid.org:saml2:metadata-extension:v2"/>
     </urn:ClientCredentialsToAccessTokenMapping>
     <urn:ReuseExistingPersistentGrantForGrant>implicit</urn:ReuseExistingPersistentGrantForGrant>
-    <urn:allowedOrigins>http://demo.bxfinance.xyz</urn:allowedOrigins>
-    <urn:allowedOrigins>https://demo.bxfinance.xyz</urn:allowedOrigins>
+    <urn:allowedOrigins>http://${PF_HOST}</urn:allowedOrigins>
+    <urn:allowedOrigins>${PF_BASE_URL}</urn:allowedOrigins>
 </urn:OAuthConfig>
