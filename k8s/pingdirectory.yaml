@@ -122,11 +122,18 @@ spec:
         volumeMounts:
         - mountPath: /opt/out
           name: out-dir
+        - name: pingdirectory-license
+          mountPath: "/opt/in/pd.profile/server-root/pre-setup/PingDirectory.lic"
+          subPath: PingDirectory.lic
+          readOnly: true
       terminationGracePeriodSeconds: 300
       volumes:
       - name: out-dir
         persistentVolumeClaim:
           claimName: out-dir
+      - name: pingdirectory-license
+        secret:
+          secretName: pingdirectory-license
   volumeClaimTemplates:
   - metadata:
       name: out-dir
