@@ -18,7 +18,7 @@ data:
   K8S_STATEFUL_SET_NAME: pingdirectory
   K8S_STATEFUL_SET_SERVICE_NAME: pingdirectory
   ORCHESTRATION_TYPE: KUBERNETES
-  # SERVER_PROFILE_URL: https://rlylepingidentity:ff63c171b7cca1d86e854d0dba74447ebc5dfe1b@github.com/Technical-Enablement-PingIdentity/BXFinance.git
+  SERVER_PROFILE_URL: https://github.com/Technical-Enablement-PingIdentity/BXFinance
   SERVER_PROFILE_PATH: pingdirectory
   MAX_HEAP_SIZE: 768m
 kind: ConfigMap
@@ -117,7 +117,7 @@ spec:
             cpu: "4"
             memory: 8Gi
           requests:
-            cpu: "4"
+            cpu: "1"
             memory: 8Gi
         volumeMounts:
         - mountPath: /opt/out

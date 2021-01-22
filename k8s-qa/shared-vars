@@ -54,3 +54,4 @@ SERVER_PROFILE_BRANCH=qa
 # bxfinance react app host
 BXFINANCEAPP_HOST=bxfinanceapp
 BXFINANCEAPP_PORT=5000
+SERVER_PROFILE_URL=https://github.com/Technical-Enablement-PingIdentity/BXFinance
