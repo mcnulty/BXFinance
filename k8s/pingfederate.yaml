@@ -52,7 +52,7 @@ spec:
             optional: true
         - configMapRef:
             name: pingfederate-environment-variables
-        image: pingidentity/pingfederate:2006-10.0.4
+        image: pingidentity/pingfederate:2012-10.2.0
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 1
@@ -77,8 +77,17 @@ spec:
             cpu: "2"
             memory: 2.5Gi
           requests:
-            cpu: "2"
+            cpu: "1"
             memory: 2.5Gi
+        volumeMounts:
+        - name: pingfederate-license
+          mountPath: "/opt/in/instance/server/default/conf/pingfederate.lic"
+          subPath: pingfederate.lic
+          readOnly: true
+      volumes:
+      - name: pingfederate-license
+        secret:
+          secretName: pingfederate-license
       initContainers:
       - name: init
         image: curlimages/curl:latest

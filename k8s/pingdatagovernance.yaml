@@ -54,7 +54,7 @@ spec:
             optional: true
         - configMapRef:
             name: pingdatagovernance-environment-variables
-        image: pingidentity/pingdatagovernance:2008-8.1.0.0
+        image: pingidentity/pingdatagovernance:2012-8.2.0.0
         name: pingdatagovernance
         ports:
         - containerPort: 80
@@ -65,8 +65,17 @@ spec:
             cpu: "2"
             memory: 2.5Gi
           requests:
-            cpu: "2"
+            cpu: "1"
             memory: 2.5Gi
+        volumeMounts:
+        - name: pingdatagovernance-license
+          mountPath: "/opt/in/instance/PingDataGovernance.lic"
+          subPath: PingDataGovernance.lic
+          readOnly: true
+      volumes:
+      - name: pingdatagovernance-license
+        secret:
+          secretName: pingdatagovernance-license
       initContainers:
       - name: init
         image: curlimages/curl:latest

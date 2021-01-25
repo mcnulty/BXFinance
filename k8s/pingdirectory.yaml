@@ -18,7 +18,7 @@ data:
   K8S_STATEFUL_SET_NAME: pingdirectory
   K8S_STATEFUL_SET_SERVICE_NAME: pingdirectory
   ORCHESTRATION_TYPE: KUBERNETES
-  # SERVER_PROFILE_URL: https://rlylepingidentity:ff63c171b7cca1d86e854d0dba74447ebc5dfe1b@github.com/Technical-Enablement-PingIdentity/BXFinance.git
+  SERVER_PROFILE_URL: https://github.com/Technical-Enablement-PingIdentity/BXFinance
   SERVER_PROFILE_PATH: pingdirectory
   MAX_HEAP_SIZE: 768m
 kind: ConfigMap
@@ -84,7 +84,7 @@ spec:
             optional: true
         - configMapRef:
             name: pingdirectory-environment-variables
-        image: pingidentity/pingdirectory:2008-8.1.0.0
+        image: pingidentity/pingdirectory:2012-8.2.0.0
         lifecycle:
           preStop:
             exec:
@@ -117,16 +117,23 @@ spec:
             cpu: "4"
             memory: 8Gi
           requests:
-            cpu: "4"
+            cpu: "1"
             memory: 8Gi
         volumeMounts:
         - mountPath: /opt/out
           name: out-dir
+        - name: pingdirectory-license
+          mountPath: "/opt/in/pd.profile/server-root/pre-setup/PingDirectory.lic"
+          subPath: PingDirectory.lic
+          readOnly: true
       terminationGracePeriodSeconds: 300
       volumes:
       - name: out-dir
         persistentVolumeClaim:
           claimName: out-dir
+      - name: pingdirectory-license
+        secret:
+          secretName: pingdirectory-license
   volumeClaimTemplates:
   - metadata:
       name: out-dir
