@@ -12,7 +12,7 @@
 
 ## Step By Step
 
-1. Clone [BXFinance] `git clone --single-branch --branch master https://github.com/Technical-Enablement-PingIdentity/BXFinance.git`
+1. Clone [BXFinance] `git clone --single-branch --branch master https://github.com/Technical-Enablement-PingIdentity/BXFinance-ServerProfiles.git`
 2. Make environment variable changes as required in env_vars file.
 3. Run `docker-compose up -d` under `BXFinance` root directory
 4. Note that PingAccess proxies everything in BXFinance, including the React app.
