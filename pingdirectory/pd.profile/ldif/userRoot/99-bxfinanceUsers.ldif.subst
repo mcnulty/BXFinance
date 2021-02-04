@@ -11796,22 +11796,21 @@ entryUUID: e5c8c6c9-149e-43a9-811f-4ac86d150857
 dn: pf-oauth-client-id=pa_wam,ou=oauthClients,${USER_BASE_DN}
 objectClass: top
 objectClass: pf-oauth-client
-pf-oauth-client-name: PA WAM
-pf-oauth-client-last-modified: 1595262139742
+pf-oauth-client-name: pa_wam
+pf-oauth-client-last-modified: 1611254398931
 pf-oauth-client-restrict-scopes: FALSE
 pf-oauth-client-require-signed-requests: FALSE
-pf-oauth-client-grant-type: implicit
 pf-oauth-client-grant-type: authorization_code
-pf-oauth-client-redirect-uri: https://*/app/banking
+pf-oauth-client-redirect-uri: https://*/acc/oidc/cb
 pf-oauth-client-supplemental-info: 22:ALLOW_EXCLUSIVE_SCOPES:false
 pf-oauth-client-supplemental-info: 44:BYPASS_ACTIVATION_CODE_CONFIRMATION_OVERRIDE:null
 pf-oauth-client-supplemental-info: 19:DEVICE_FLOW_SETTING:SERVER_DEFAULT
-pf-oauth-client-supplemental-info: 14:DEFAULT_ATM_ID:jwtDefault
+pf-oauth-client-supplemental-info: 14:DEFAULT_ATM_ID:null
 pf-oauth-client-supplemental-info: 32:DEVICE_POLLING_INTERVAL_OVERRIDE:null
 pf-oauth-client-supplemental-info: 26:PING_ACCESS_LOGOUT_CAPABLE:false
 pf-oauth-client-supplemental-info: 23:RESTRICT_RESPONSE_TYPES:false
 pf-oauth-client-supplemental-info: 35:REQUIRE_PROOF_KEY_FOR_CODE_EXCHANGE:false
-pf-oauth-client-supplemental-info: 29:ACCESS_SESSION_REVOCATION_API:false
+pf-oauth-client-supplemental-info: 29:ACCESS_SESSION_REVOCATION_API:true
 pf-oauth-client-supplemental-info: 34:PERSISTENT_GRANT_IDLE_TIMEOUT_TYPE:SERVER_DEFAULT
 pf-oauth-client-supplemental-info: 31:id_token_encrypted_response_alg:null
 pf-oauth-client-supplemental-info: 32:REQUEST_OBJECT_SIGNING_ALGORITHM:null
@@ -11821,22 +11820,21 @@ pf-oauth-client-supplemental-info: 16:EXCLUSIVE_SCOPES:null
 pf-oauth-client-supplemental-info: 7:ENABLED:true
 pf-oauth-client-supplemental-info: 23:USER_AUTHZ_URL_OVERRIDE:null
 pf-oauth-client-supplemental-info: 30:PENDING_AUTHZ_TIMEOUT_OVERRIDE:null
-pf-oauth-client-supplemental-info: 24:vnd.ping.policy_group_id:OIDCPolicyDefault
+pf-oauth-client-supplemental-info: 24:vnd.ping.policy_group_id:null
 pf-oauth-client-supplemental-info: 37:TOKEN_ENDPOINT_AUTH_SIGNING_ALGORITHM:null
-pf-oauth-client-supplemental-info: 18:pf_ecm_authNexp_00:PasswordlessPref
 pf-oauth-client-supplemental-info: 28:id_token_signed_response_alg:null
 pf-oauth-client-id: pa_wam
 pf-oauth-client-description: Client for BXFinance web apps.
 pf-oauth-client-persistent-grant-exp-type: SERVER_DEFAULT
 pf-oauth-client-authn-type: SECRET
-pf-oauth-client-hashed-secret: PQkB20eDPyDkCB25zkVyiaM7AhdWRjAX62HlQ2vl4iE.Dg38IjeX.2
+pf-oauth-client-hashed-secret: 6vrvAcXnb_wWTaaog-inVW7EuOt2ZxhmJnccK5NRRSk.dV3OBWUS.2
 pf-oauth-client-enforce-replay-prevention: FALSE
 pf-oauth-client-bypass-approval-page: TRUE
-createTimestamp: 20200710153900.008Z
+createTimestamp: 20210121183958.950Z
 creatorsName: cn=pingfederate,cn=Root DNs,cn=config
-entryUUID: 0ee43ce1-6630-4aba-be99-30428d089630
+modifyTimestamp: 20210121183958.950Z
 modifiersName: cn=pingfederate,cn=Root DNs,cn=config
-modifyTimestamp: 20200720162219.744Z
+entryUUID: 80d3793c-b545-4c47-b01b-3a9c2426f2af
 
 dn: pf-authn-session-attribute-hash=cd15b58c9496246d1959db816a285bdc87dd0a48,pf-authn-session-group-id=LdDUMIhK6LyijLjDpBh5peQiy,ou=sessions,${USER_BASE_DN}
 objectClass: top
