@@ -222,7 +222,7 @@
         "agentId": 0,
         "allowEmptyPathSegments": false,
         "applicationType": "Web",
-        "authenticationChallengePolicyId": null,
+        "authenticationChallengePolicyId": "f5e19d9f-d12d-470b-aad5-760651101b7a",
         "caseSensitivePath": false,
         "contextRoot": "/consent",
         "defaultAuthType": "Web",
@@ -232,7 +232,7 @@
         "id": 3,
         "identityMappingIds": {
           "API": 0,
-          "Web": 0
+          "Web": 1
         },
         "issuer": null,
         "lastModified": 1610124487220,
@@ -240,7 +240,12 @@
         "name": "PD - ConsentAPI",
         "policy": {
           "API": [],
-          "Web": []
+          "Web": [
+            {
+              "type": "Rule",
+              "id": 6
+            }
+          ]
         },
         "realm": null,
         "requireHTTPS": true,
@@ -250,7 +255,7 @@
         "virtualHostIds": [
           3
         ],
-        "webSessionId": 0
+        "webSessionId": 1
       },
       {
         "accessValidatorId": 0,
@@ -259,7 +264,7 @@
         "agentId": 0,
         "allowEmptyPathSegments": false,
         "applicationType": "Web",
-        "authenticationChallengePolicyId": null,
+        "authenticationChallengePolicyId": "f5e19d9f-d12d-470b-aad5-760651101b7a",
         "caseSensitivePath": false,
         "contextRoot": "/directory",
         "defaultAuthType": "Web",
@@ -269,7 +274,7 @@
         "id": 4,
         "identityMappingIds": {
           "API": 0,
-          "Web": 0
+          "Web": 1
         },
         "issuer": null,
         "lastModified": 1610124487224,
@@ -277,7 +282,12 @@
         "name": "PD - DirectoryAPI",
         "policy": {
           "API": [],
-          "Web": []
+          "Web": [
+            {
+              "type": "Rule",
+              "id": 6
+            }
+          ]
         },
         "realm": null,
         "requireHTTPS": true,
@@ -287,7 +297,7 @@
         "virtualHostIds": [
           3
         ],
-        "webSessionId": 0
+        "webSessionId": 1
       },
       {
         "accessValidatorId": 0,
@@ -364,28 +374,28 @@
         "webSessionId": 0
       },
       {
-        "accessValidatorId": 1,
+        "accessValidatorId": 0,
         "agentCacheInvalidatedExpiration": 1610125387388,
         "agentCacheInvalidatedResponseDuration": 900,
         "agentId": 0,
         "allowEmptyPathSegments": false,
-        "applicationType": "API",
-        "authenticationChallengePolicyId": null,
+        "applicationType": "Web",
+        "authenticationChallengePolicyId": "f5e19d9f-d12d-470b-aad5-760651101b7a",
         "caseSensitivePath": false,
         "contextRoot": "/transferMoney",
-        "defaultAuthType": "API",
+        "defaultAuthType": "Web",
         "description": "transferMoney",
         "destination": "Site",
         "enabled": true,
         "id": 7,
         "identityMappingIds": {
-          "API": 1,
-          "Web": 0
+          "API": 0,
+          "Web": 1
         },
         "issuer": null,
         "lastModified": 1610124487388,
         "manualOrderingEnabled": false,
-        "name": "transferMoney",
+        "name": "Transfer Money API",
         "policy": {
           "API": [],
           "Web": []
@@ -398,7 +408,7 @@
         "virtualHostIds": [
           3
         ],
-        "webSessionId": 0
+        "webSessionId": 1
       },
       {
         "accessValidatorId": 0,
@@ -407,7 +417,7 @@
         "agentId": 0,
         "allowEmptyPathSegments": false,
         "applicationType": "Web",
-        "authenticationChallengePolicyId": null,
+        "authenticationChallengePolicyId": "f5e19d9f-d12d-470b-aad5-760651101b7a",
         "caseSensitivePath": false,
         "contextRoot": "/app",
         "defaultAuthType": "Web",
@@ -417,9 +427,9 @@
         "id": 9,
         "identityMappingIds": {
           "API": 0,
-          "Web": 2
+          "Web": 0
         },
-        "issuer": null,
+        "issuer": "https://${PF_HOST}:${PF_ENGINE_PUBLIC_PORT}",
         "lastModified": 1610124487387,
         "manualOrderingEnabled": false,
         "name": "BXFinance Web App",
@@ -438,23 +448,23 @@
         "webSessionId": 1
       },
       {
-        "accessValidatorId": 1,
+        "accessValidatorId": 0,
         "agentCacheInvalidatedExpiration": 1610125387305,
         "agentCacheInvalidatedResponseDuration": 900,
         "agentId": 0,
         "allowEmptyPathSegments": false,
-        "applicationType": "API",
-        "authenticationChallengePolicyId": null,
+        "applicationType": "Web",
+        "authenticationChallengePolicyId": "f5e19d9f-d12d-470b-aad5-760651101b7a",
         "caseSensitivePath": false,
         "contextRoot": "/scim",
-        "defaultAuthType": "API",
+        "defaultAuthType": "Web",
         "description": "DG proxy endpoint to PD SCIM API.",
         "destination": "Site",
         "enabled": true,
         "id": 10,
         "identityMappingIds": {
-          "API": 1,
-          "Web": 0
+          "API": 0,
+          "Web": 1
         },
         "issuer": null,
         "lastModified": 1610124487305,
@@ -462,7 +472,12 @@
         "name": "DG SCIM API",
         "policy": {
           "API": [],
-          "Web": []
+          "Web": [
+            {
+              "type": "Rule",
+              "id": 6
+            }
+          ]
         },
         "realm": null,
         "requireHTTPS": true,
@@ -472,26 +487,26 @@
         "virtualHostIds": [
           3
         ],
-        "webSessionId": 0
+        "webSessionId": 1
       },
       {
-        "accessValidatorId": 1,
+        "accessValidatorId": 0,
         "agentCacheInvalidatedExpiration": 1610125387298,
         "agentCacheInvalidatedResponseDuration": 900,
         "agentId": 0,
         "allowEmptyPathSegments": false,
-        "applicationType": "API",
-        "authenticationChallengePolicyId": null,
+        "applicationType": "Web",
+        "authenticationChallengePolicyId": "f5e19d9f-d12d-470b-aad5-760651101b7a",
         "caseSensitivePath": false,
         "contextRoot": "/openbanking",
-        "defaultAuthType": "API",
+        "defaultAuthType": "Web",
         "description": "",
         "destination": "Site",
         "enabled": true,
         "id": 11,
         "identityMappingIds": {
-          "API": 1,
-          "Web": 0
+          "API": 0,
+          "Web": 1
         },
         "issuer": null,
         "lastModified": 1610124487298,
@@ -499,7 +514,12 @@
         "name": "DG OpenBanking API",
         "policy": {
           "API": [],
-          "Web": []
+          "Web": [
+            {
+              "type": "Rule",
+              "id": 6
+            }
+          ]
         },
         "realm": null,
         "requireHTTPS": true,
@@ -509,7 +529,7 @@
         "virtualHostIds": [
           3
         ],
-        "webSessionId": 0
+        "webSessionId": 1
       },
       {
         "accessValidatorId": 0,
@@ -518,7 +538,7 @@
         "agentId": 0,
         "allowEmptyPathSegments": false,
         "applicationType": "Web",
-        "authenticationChallengePolicyId": null,
+        "authenticationChallengePolicyId": "f5e19d9f-d12d-470b-aad5-760651101b7a",
         "caseSensitivePath": false,
         "contextRoot": "/anything",
         "defaultAuthType": "Web",
@@ -528,7 +548,7 @@
         "id": 12,
         "identityMappingIds": {
           "API": 0,
-          "Web": 2
+          "Web": 1
         },
         "issuer": null,
         "lastModified": 1610124487350,
@@ -538,7 +558,7 @@
           "API": [],
           "Web": [
             {
-              "id": 4,
+              "id": 6,
               "type": "Rule"
             }
           ]
@@ -552,6 +572,59 @@
           3
         ],
         "webSessionId": 1
+      },
+      {
+        "accessValidatorId": 0,
+        "agentCacheInvalidatedExpiration": 1611255977857,
+        "agentCacheInvalidatedResponseDuration": 900,
+        "agentId": 0,
+        "allowEmptyPathSegments": false,
+        "applicationType": "Web",
+        "authenticationChallengePolicyId": null,
+        "caseSensitivePath": false,
+        "contextRoot": "/sockjs-node",
+        "defaultAuthType": "Web",
+        "description": "",
+        "destination": "Site",
+        "enabled": true,
+        "id": 13,
+        "identityMappingIds": {
+          "API": 0,
+          "Web": 0
+        },
+        "issuer": null,
+        "lastModified": 1611255077857,
+        "manualOrderingEnabled": false,
+        "name": "ZZZ-Dev-Socket",
+        "policy": {
+          "API": [],
+          "Web": []
+        },
+        "realm": null,
+        "requireHTTPS": true,
+        "resourceOrder": [],
+        "siteId": 8,
+        "spaSupportEnabled": true,
+        "virtualHostIds": [
+          3
+        ],
+        "webSessionId": 0
+      }
+    ],
+    "authenticationChallengePolicies": [
+      {
+        "challengeResponseChain": [],
+        "defaultChallengeResponse": {
+          "filter": null,
+          "generator": {
+            "className": "com.pingidentity.pa.acp.generators.OidcAuthnRequestRedirectResponseGenerator",
+            "configuration": {}
+          }
+        },
+        "description": null,
+        "id": "1fac14c9-6ac7-4280-b6fe-731195fff921",
+        "name": "Unconditional OIDC Redirect",
+        "system": false
       }
     ],
     "authTokenMgmt": {
@@ -667,59 +740,7 @@
           "headerNamePrefix": null
         },
         "id": 1,
-        "name": "apiIdentityMapping"
-      },
-      {
-        "className": "com.pingidentity.pa.identitymappings.HeaderIdentityMapping",
-        "configuration": {
-          "attributeHeaderMappings": [
-            {
-              "attributeName": "sub",
-              "headerName": "X-USER",
-              "subject": true
-            },
-            {
-              "attributeName": "access_token",
-              "headerName": "X-ACCESS-TOKEN",
-              "subject": false
-            }
-          ],
-          "exclusionList": false,
-          "exclusionListAttributes": [],
-          "exclusionListSubject": null,
-          "headerClientCertificateMappings": [],
-          "headerNamePrefix": null
-        },
-        "id": 2,
-        "name": "headerMapping"
-      },
-      {
-        "className": "com.pingidentity.pa.identitymappings.JwtIdentityMapping",
-        "configuration": {
-          "attributeMappings": [
-            {
-              "jwtClaimName": "sub",
-              "subject": true,
-              "userAttributeName": "sub"
-            },
-            {
-              "jwtClaimName": "x-access-token",
-              "subject": false,
-              "userAttributeName": "access_token"
-            }
-          ],
-          "audience": "global",
-          "cacheJwt": true,
-          "clientCertificateJwtClaimName": null,
-          "exclusionList": false,
-          "exclusionListAttributes": [],
-          "exclusionListSubject": null,
-          "headerName": "X-PA-Mapping",
-          "mapAsBearerToken": false,
-          "maxDepth": 1
-        },
-        "id": 3,
-        "name": "jwtMapping"
+        "name": "Sub => X-USER, X-CERT"
       }
     ],
     "keyPairs": [
@@ -767,26 +788,6 @@
       "keyRollEnabled": true,
       "keyRollPeriodInHours": 24,
       "signingAlgorithm": null
-    },
-    "pingFederate": {
-      "application": null,
-      "auditLevel": "OFF",
-      "availabilityProfileId": 0,
-      "backChannelBasePath": null,
-      "backChannelSecure": true,
-      "basePath": null,
-      "expectedHostname": null,
-      "host": "${PF_HOST}",
-      "loadBalancingStrategyId": 0,
-      "port": "${PD_ENGINE_PUBLIC_PORT}",
-      "secure": true,
-      "skipHostnameVerification": true,
-      "targets": [
-        "pingfederate:9031"
-      ],
-      "trustedCertificateGroupId": 2,
-      "useProxy": false,
-      "useSlo": false
     },
     "pingFederateAdmin": {
       "adminPassword": {
@@ -864,7 +865,7 @@
       }
     ],
     "reservedApplication": {
-      "contextRoot": "/pa"
+      "contextRoot": "/acc"
     },
     "resources": [
       {
@@ -1087,13 +1088,13 @@
           "/*"
         ],
         "policy": {
-          "API": [
+          "Web": [
             {
               "id": 3,
               "type": "RuleSet"
             }
           ],
-          "Web": []
+          "API": []
         },
         "queryParamConfig": null,
         "resourceType": "Standard",
@@ -1236,34 +1237,38 @@
         "unprotected": false
       },
       {
-        "anonymous": true,
+        "anonymous": false,
         "applicationId": 9,
         "auditLevel": "ON",
-        "authenticationChallengePolicyId": null,
+        "authenticationChallengePolicyId": "1fac14c9-6ac7-4280-b6fe-731195fff921",
         "defaultAuthTypeOverride": "Web",
         "enabled": true,
-        "id": 13,
+        "id": 16,
         "methods": [
           "*"
         ],
-        "name": "Account Dashboard",
+        "name": "Login Endpoint",
         "pathPatterns": [
           {
-            "pattern": "/banking",
+            "pattern": "/login/silent",
             "type": "WILDCARD"
           }
-        ],
-        "pathPrefixes": [
-          "/banking"
         ],
         "policy": {
           "API": [],
           "Web": []
         },
         "queryParamConfig": null,
-        "resourceType": "Standard",
+        "resourceType": "Virtual",
         "resourceTypeConfiguration": {
-          "responseGenerator": null
+          "responseGenerator": {
+            "className": "com.pingidentity.pa.resources.responsegenerator.TemplateResponseGenerator",
+            "configuration": {
+              "mediaType": "application/json;charset=utf-8",
+              "responseCode": 200,
+              "template": "{}"
+            }
+          }
         },
         "rootResource": false,
         "unprotected": false
@@ -1305,6 +1310,39 @@
         },
         "rootResource": false,
         "unprotected": false
+      },
+      {
+        "anonymous": false,
+        "applicationId": 13,
+        "auditLevel": "ON",
+        "authenticationChallengePolicyId": null,
+        "defaultAuthTypeOverride": null,
+        "enabled": true,
+        "id": 15,
+        "methods": [
+          "*"
+        ],
+        "name": "Root Resource",
+        "pathPatterns": [
+          {
+            "pattern": "/*",
+            "type": "WILDCARD"
+          }
+        ],
+        "pathPrefixes": [
+          "/*"
+        ],
+        "policy": {
+          "API": [],
+          "Web": []
+        },
+        "queryParamConfig": null,
+        "resourceType": "Standard",
+        "resourceTypeConfiguration": {
+          "responseGenerator": null
+        },
+        "rootResource": true,
+        "unprotected": false
       }
     ],
     "ruleSets": [
@@ -1340,7 +1378,7 @@
     ],
     "rules": [
       {
-        "className": "com.pingidentity.pa.policy.OAuthPolicyInterceptor",
+        "className": "com.pingidentity.pa.policy.GroovyPolicyInterceptor",
         "configuration": {
           "errorResponseCode": 403,
           "errorResponseContentType": "application/json; charset=UTF-8",
@@ -1384,7 +1422,7 @@
         ]
       },
       {
-        "className": "com.pingidentity.pa.policy.OAuthPolicyInterceptor",
+        "className": "com.pingidentity.pa.policy.GroovyPolicyInterceptor",
         "configuration": {
           "errorResponseCode": 403,
           "errorResponseContentType": "application/json; charset=UTF-8",
@@ -1402,24 +1440,6 @@
         ]
       },
       {
-        "className": "com.pingidentity.pa.policy.GroovyPolicyInterceptor",
-        "configuration": {
-          "errorResponseCode": 403,
-          "errorResponseContentType": "text/html; charset=UTF-8",
-          "errorResponseStatusMsg": "Forbidden",
-          "errorResponseTemplateFile": "policy.error.page.template.html",
-          "groovyScript": "if(!exc.response)\n{\n  def identityAttributes = exc?.identity?.getAttributes();\n  def atNode = (identityAttributes)?identityAttributes.get(\"access_token\"):null;\n  def accessTokenValue = (atNode)?atNode.asText():null;\n  if(accessTokenValue)\n    exc?.request?.header?.add(\"Authorization\", accessTokenValue);\n}\nanything();",
-          "rejectionHandler": "1",
-          "rejectionHandlingEnabled": true
-        },
-        "id": 4,
-        "name": "parseAT",
-        "supportedDestinations": [
-          "Site",
-          "Agent"
-        ]
-      },
-      {
         "className": "com.pingidentity.pa.policy.RedirectRule",
         "configuration": {
           "responseCode": 302,
@@ -1431,6 +1451,37 @@
           "Site",
           "Agent"
         ]
+      },
+      {
+        "className": "com.pingidentity.pa.policy.GroovyPolicyInterceptor",
+        "configuration": {
+          "errorResponseCode": 403,
+          "errorResponseContentType": "text/html; charset=UTF-8",
+          "errorResponseStatusMsg": "Forbidden",
+          "errorResponseTemplateFile": "policy.error.page.template.html",
+          "groovyScript": "if (!exc.response) {\n  exc?.request?.header?.removeFields(\"Authorization\")\n  def at = exc?.identity?.attributes?.get(\"access_token\")\n  if (at) {\n    exc?.request?.header?.add(\"Authorization\", \"Bearer \" + at.asText())\n  }\n}\n\npass()",
+          "rejectionHandler": "1",
+          "rejectionHandlingEnabled": true
+        },
+        "id": 6,
+        "name": "Map AT as Bearer",
+        "supportedDestinations": [
+          "Site",
+          "Agent"
+        ]
+      }
+    ],
+    "siteAuthenticators": [
+      {
+        "className": "com.pingidentity.pa.siteauthenticators.BasicAuthTargetSiteAuthenticator",
+        "id": 1,
+        "name": "BXFinance Directory API",
+        "configuration": {
+          "username": "cn=dmanager",
+          "password": {
+            "encryptedValue": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRm1STGV4SHBPdUJzaU1OSiIsInZlcnNpb24iOiIxLjAuMC4xMDcifQ..nOBZWYOTSxEAGORwq39fSQ.VGJdmFfVfO-r7PXFpm1kBg.raUrknDgTUGIN4gX8hCyIA"
+          }
+        }
       }
     ],
     "sites": [
@@ -1485,7 +1536,9 @@
         "name": "PingDirectory",
         "secure": true,
         "sendPaCookie": false,
-        "siteAuthenticatorIds": [],
+        "siteAuthenticatorIds": [
+          1
+        ],
         "skipHostnameVerification": true,
         "targets": [
           "pingdirectory:2${PD_ENGINE_PUBLIC_PORT}"
@@ -1524,7 +1577,7 @@
         "maxWebSocketConnections": -1,
         "name": "Beeceptor",
         "secure": true,
-        "sendPaCookie": true,
+        "sendPaCookie": false,
         "siteAuthenticatorIds": [],
         "skipHostnameVerification": true,
         "targets": [
@@ -1544,11 +1597,11 @@
         "maxWebSocketConnections": -1,
         "name": "PingDataGovernance",
         "secure": true,
-        "sendPaCookie": true,
+        "sendPaCookie": false,
         "siteAuthenticatorIds": [],
         "skipHostnameVerification": true,
         "targets": [
-          "pingdatagovernance:3443"
+          "pingdatagovernance:${PD_ENGINE_PUBLIC_PORT}"
         ],
         "trustedCertificateGroupId": 2,
         "useProxy": false,
@@ -1564,7 +1617,7 @@
         "maxWebSocketConnections": -1,
         "name": "React Apps - nginx",
         "secure": false,
-        "sendPaCookie": true,
+        "sendPaCookie": false,
         "siteAuthenticatorIds": [],
         "skipHostnameVerification": true,
         "targets": [
@@ -1677,11 +1730,11 @@
         "trustedCertificateGroupId": 0
       },
       {
-        "agentResourceCacheTTL": 900,
         "host": "${PF_HOST}",
         "id": 3,
+        "port": "${PF_ENGINE_PUBLIC_PORT}",
+        "agentResourceCacheTTL": 900,
         "keyPairId": 0,
-        "port": "${PD_ENGINE_PUBLIC_PORT}",
         "trustedCertificateGroupId": 0
       }
     ],
@@ -1699,17 +1752,17 @@
     "webSessions": [
       {
         "audience": "global",
-        "cacheUserAttributes": false,
+        "cacheUserAttributes": true,
         "clientCredentials": {
           "clientId": "pa_wam",
           "clientSecret": {
-            "encryptedValue": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRm1STGV4SHBPdUJzaU1OSiJ9..SY75b3CGslFf3Fm3_8MKDw.ppZNfQVqAHVkGhEMHTOmAq6jNBmiRngV3MDwHkpH7iZKmrF3RCebcvAmkOHceKXmTkwgXQAF3v64xVS6troN0qBJuOYAtgood2x4PacPJko.qeBlp-47D353Wp3TvfP9XQ"
+            "encryptedValue": "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiRm1STGV4SHBPdUJzaU1OSiIsInZlcnNpb24iOiIxLjAuMC4xMDcifQ.._pNWO7cR829Bc8XTxf63cQ.wme9NUhNHzb2-qlO1c8LgA.P_VSqAZUt6WQ_hAuQFVVGg"
           },
           "credentialsType": "SECRET",
           "keyPairId": 0
         },
         "cookieDomain": "",
-        "cookieType": "Signed",
+        "cookieType": "Encrypted",
         "enableRefreshUser": true,
         "failOnUnsupportedPreservationContentType": false,
         "httpOnlyCookie": true,
@@ -1727,12 +1780,13 @@
           "address",
           "email",
           "phone",
-          "profile"
+          "profile",
+          "urn:pingdirectory:consent"
         ],
         "secureCookie": true,
         "sendRequestedUrlToProvider": true,
         "sessionTimeoutInMinutes": 240,
-        "validateSessionIsAlive": false,
+        "validateSessionIsAlive": true,
         "webStorageType": "SessionStorage"
       }
     ]
